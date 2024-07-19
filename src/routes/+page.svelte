@@ -124,6 +124,8 @@
         if (selected.name === correct.name) {
             title = "CORRECT"
             document.getElementById("bg").classList.replace("bg-black","bg-green-500")
+            const sound = new Audio('/correct.mp3');
+            sound.play();
         }
         else{
             title = "INCORRECT"
@@ -132,6 +134,8 @@
                 highlight = true
             },1000)
 
+            const sound = new Audio('/incorrect.mp3');
+            sound.play();
         }
         setTimeout(() => {
             location.reload()
